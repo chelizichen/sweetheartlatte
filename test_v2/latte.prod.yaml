@@ -1,0 +1,23 @@
+mode: production
+
+main:
+  protocol: http
+  host: 127.0.0.1
+  port: 4399
+
+servants:
+  user_server:
+    host: 127.0.0.1
+    port: 4501
+    protocol: latte
+    path: ./user_server/index.js
+  cache_server:
+    host: 127.0.0.1
+    port: 4502
+    protocol: latte
+    path: ./cache_server/index.js
+  order_server:
+    host: 127.0.0.1
+    port: 4503
+    protocol: latte
+    path: ./order_server/index.js

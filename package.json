@@ -1,0 +1,38 @@
+{
+  "name": "sweetheartlatte",
+  "version": "1.0.0",
+  "description": "The next form of microservices",
+  "main": "index.js",
+  "scripts": {
+    "test_v1": "cross-env LATTE_MODE=dev ts-node-dev ./test_v1/main.ts",
+    "test_v2": "cross-env LATTE_MODE=dev ts-node-dev ./test_v2/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chelizichen/sweetheartlatte.git"
+  },
+  "keywords": [
+    "micorservice",
+    "nodejs",
+    "framework",
+    "cluster",
+    "http",
+    "tcp"
+  ],
+  "author": "chelizichen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chelizichen/sweetheartlatte/issues"
+  },
+  "homepage": "https://github.com/chelizichen/sweetheartlatte#readme",
+  "dependencies": {
+    "@types/node": "^20.10.5",
+    "fastify": "^4.25.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
