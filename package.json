@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test_v1": "cross-env LATTE_MODE=dev ts-node-dev ./test_v1/main.ts",
-    "test_v2": "cross-env LATTE_MODE=dev ts-node-dev ./test_v2/main.ts"
+    "test_v2": "cross-env LATTE_MODE=dev TARGET_PATH=test_v2 ts-node-dev ./test_v2/main.ts TS_NODE_TRANSPILE_ONLY=true",
+    "build":"tsc",
+    "start":"cross-env LATTE_MODE=prod TARGET_PATH=dist/test_v2 node dist/test_v2/main.js"
   },
   "repository": {
     "type": "git",

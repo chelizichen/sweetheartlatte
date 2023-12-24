@@ -27,7 +27,8 @@ export default  class L_ServerProcess implements T_ConnPool.ServerProcess{
     }
 
     static FORK(SERVICE_NAME:string,servant: T_Yaml.Servant_Config){
-        const serverRealPath = path.resolve(cwd(),"test_v2",servant.path);
+        const TARGET_PATH = process.env.TARGET_PATH as string;
+        const serverRealPath = path.resolve(cwd(),TARGET_PATH,servant.path);
         // start child process
         const childService = fork(serverRealPath,[],{
             env:{
